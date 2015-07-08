@@ -121,6 +121,10 @@ $temperature->getCelsius(); // 10
 (string) $temperature; // "cold"
 ```
 
+As you can see above the suggested way to assign an attribute (in this case celsius) to each value in the value set of the enum is to add a new property to the class and to override the constructor. Don't use a `switch` statement for this.
+
+This will make sure that there's always one assigned attribute per value in the value set of the enum, so the assigned attributes will not get out of sync with the value set.
+
 ### Usage with doctrine2 ###
 
 You can use this library together with doctrine2 by using so called [embeddables](http://doctrine-orm.readthedocs.org/en/latest/tutorials/embeddables.html):
