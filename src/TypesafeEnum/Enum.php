@@ -4,7 +4,6 @@ namespace TypesafeEnum;
 
 /**
  * Representing enum values, e.g. types, while providing type safety.
- * Use plain strings to represent values (not `private static`s or `const`s).
  *
  * Example:
  *      
