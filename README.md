@@ -54,10 +54,12 @@ class User
 $user = new User('hello@example.com', UserType::PAID()); // Good
 $user->getType()->isPaid(); // true
 $user->getType()->isFree(); // false
+(string) $user->getType(); // "paid"
 
 $user = new User('hello@example.com', UserType::FREE()); // Good
 $user->getType()->isFree(); // true
 $user->getType()->isPaid(); // false
+(string) $user->getType(); // "free"
 
 $user = new User('hello@example.com', 'some string'); // Type error (PHP Catchable fatal error:  Argument 2 passed to User::__construct() must be an instance of UserType, integer given, called in ...)
 $user = new User('hello@example.com', null); // Type error (PHP Catchable fatal error:  Argument 2 passed to User::__construct() must be an instance of UserType, null given, called in ...)
@@ -110,11 +112,13 @@ $temperature = Temperature::HOT();
 $temperature->isHot(); // true
 $temperature->isCold(); // false
 $temperature->getCelsius(); // 40
+(string) $temperature; // "hot"
 
 $temperature = Temperature::COLD();
 $temperature->isCold(); // true
 $temperature->isHot(); // false
 $temperature->getCelsius(); // 10
+(string) $temperature; // "cold"
 ```
 
 ### Usage with doctrine2 ###
