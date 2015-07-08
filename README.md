@@ -1,5 +1,6 @@
 TypesafeEnum
 ============
+[![Latest Stable Version](https://poser.pugx.org/mpscholten/typesafe-enum/version)](https://packagist.org/packages/mpscholten/typesafe-enum) [![License](https://poser.pugx.org/mpscholten/typesafe-enum/license)](https://packagist.org/packages/mpscholten/typesafe-enum) [![Circle CI](https://circleci.com/gh/mpscholten/typesafe-enum.svg?style=shield)](https://circleci.com/gh/mpscholten/typesafe-enum)
 
 A lightweight, type safe enum library for PHP.
 
