@@ -13,6 +13,6 @@
         "phpunit/phpunit": "^4.7"
     },
     "autoload": {
-        "psr-0": {"TypesafeEnum\\": "src/"}
+        "psr-4": {"TypesafeEnum\\": "src/TypesafeEnum/"}
     }
 }
