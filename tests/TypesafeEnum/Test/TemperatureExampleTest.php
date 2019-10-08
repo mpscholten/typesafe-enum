@@ -3,8 +3,9 @@
 namespace TypesafeEnum\Test;
 
 use TypesafeEnum\Enum;
+use PHPUnit\Framework\TestCase;
 
-class TemperatureExampleTest extends \PHPUnit_Framework_TestCase
+class TemperatureExampleTest extends TestCase
 {
     public function testTemperatureHot()
     {
