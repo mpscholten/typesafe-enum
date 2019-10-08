@@ -2,14 +2,13 @@
 
 namespace TypesafeEnum\Test;
 
-use TypesafeEnum\Enum;
 use PHPUnit\Framework\TestCase;
 
 class TemperatureExampleTest extends TestCase
 {
     public function testTemperatureHot()
     {
-        $temperature = Temperature::HOT();
+        $temperature = TemperatureExample::HOT();
 
         $this->assertTrue($temperature->isHot());
         $this->assertFalse($temperature->isCold());
@@ -18,49 +17,10 @@ class TemperatureExampleTest extends TestCase
 
     public function testTemperatureCold()
     {
-        $temperature = Temperature::COLD();
+        $temperature = TemperatureExample::COLD();
 
         $this->assertTrue($temperature->isCold());
         $this->assertFalse($temperature->isHot());
         $this->assertEquals(10, $temperature->getCelsius());
-    }
-}
-
-class Temperature extends Enum
-{
-    private $celsius;
-
-    protected function __construct($value, $celsius)
-    {
-        parent::__construct($value);
-        $this->celsius = $celsius;
-    }
-
-    public static function HOT()
-    {
-        return new Temperature('hot', 40);
-    }
-
-    public static function COLD()
-    {
-        return new Temperature('cold', 10);
-    }
-
-    public function isHot()
-    {
-        return $this->is('hot');
-    }
-
-    public function isCold()
-    {
-        return $this->is('cold');
-    }
-
-    /**
-     * @return int
-     */
-    public function getCelsius()
-    {
-        return $this->celsius;
     }
 }
