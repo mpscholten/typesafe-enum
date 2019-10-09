@@ -16,5 +16,8 @@
     },
     "autoload": {
         "psr-4": {"TypesafeEnum\\": "src/TypesafeEnum/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"TypesafeEnum\\Test\\": "tests/TypesafeEnum/Test"}
     }
 }
