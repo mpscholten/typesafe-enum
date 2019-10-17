@@ -13,6 +13,7 @@ class TemperatureExampleTest extends TestCase
         $this->assertTrue($temperature->isHot());
         $this->assertFalse($temperature->isCold());
         $this->assertEquals(40, $temperature->getCelsius());
+        $this->assertEquals('hot', (string) $temperature);
     }
 
     public function testTemperatureCold()
@@ -22,5 +23,6 @@ class TemperatureExampleTest extends TestCase
         $this->assertTrue($temperature->isCold());
         $this->assertFalse($temperature->isHot());
         $this->assertEquals(10, $temperature->getCelsius());
+        $this->assertEquals('cold', (string) $temperature);
     }
 }

@@ -7,4 +7,9 @@
   <testsuite name="Typesafe Enum Testsuite">
     <directory>./tests/TypesafeEnum/Test/</directory>
   </testsuite>
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="false">
+        <directory suffix=".php">src</directory>
+    </whitelist>
+  </filter>
 </phpunit>
